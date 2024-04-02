@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Summary</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f3ff;
+    color: #333;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    background-color: #333333;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+li:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <h2><u>Summary</u></h2>
+    <p>{{ summary }}</p>
+    <h2><u>Keywords</u></h2>
+    <ul>
+        {% for keyword in keywords %}
+            <li>{{ keyword }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
